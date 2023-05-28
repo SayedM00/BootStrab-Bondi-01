@@ -1,0 +1,242 @@
+:root {
+    --dark: #19283f;
+    --green: #33d1cc;
+    --red: #ff3150;
+    --yellow: #ffc400;
+    --section-color:#eff7fa
+}
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+input {
+    transition:.3s
+}
+.show {
+    display: inline-block !important;
+    transition:.3s
+}
+.main-btn {
+    background-color:var(--red);
+    color:var(--yellow);
+    padding:.5rem 1rem
+}
+.main-btn:hover {
+    background-color:var(--red);
+    color:white
+}
+.main-title::after {
+    content:"";
+    position:absolute;
+    width:170px;
+    height:2px;
+    background-color:var(--green);
+    bottom:-20px;
+    left:50%;
+    transform:translateX(-50%)
+}
+.our-work .filter li:hover,
+.our-work .filter li.active {
+    background-color:var(--red);
+    color:var(--yellow)
+}
+.bar {
+    position:fixed;
+    top:0;
+    height:5px;
+    background-color: var(--red);
+    z-index: 9999
+}
+/* Start Nav */
+.navbar {
+    background-color:var(--dark)
+}
+.navbar .navbar-nav .nav-link {
+    color:white
+}
+.navbar .navbar-nav .nav-link.active, 
+.navbar .navbar-nav .nav-link:hover, 
+.navbar .navbar-nav .nav-link:focus {
+    color:var(--green);
+}
+.navbar .search {
+    border-left:1px solid var(--green)
+}
+.navbar .search i {
+    color:var(--green);
+    cursor:pointer
+}
+.navbar .navbar-toggler {
+    color:white;
+    font-size:25px;
+    border-color:white
+}
+.navbar .navbar-toggler:focus {
+    box-shadow: none;
+}
+.navbar .navbar-toggler[aria-expanded="true"] {
+    border-color:var(--green)
+}
+/* End Nav */
+/* Start Landing Page */
+.landing {
+    background-color:var(--dark);
+    min-height: calc(100vh - 72px);
+}
+.landing h1 {
+    font-weight: 100;
+}
+/* End Landing Page */
+/* Start Features */
+.features .icons-holder {
+    min-height: 200px;
+}
+.features .icons-holder svg {
+    left:50%;
+    transform:translateX(-50%);
+}
+.features .icons-holder svg:first-of-type {
+    font-size:12rem;
+    color:var(--section-color)
+}
+.features .icons-holder svg:last-of-type {
+    color:var(--green);
+    font-size:4rem
+}
+.features h4 {
+    color:var(--yellow)
+}
+/* End Features */
+/* Start Our Work */
+.our-work {
+    background-color: var(--section-color);
+}
+.our-work ul li {
+    margin-right: 5px;
+    padding:.5rem 1rem;
+    cursor:pointer;
+    transition:.3s
+}
+@media (max-width:767px) {
+    .our-work ul li {
+        padding: 10px;
+    }
+    
+}
+.our-work .row > div {
+    transition:4s
+}
+/* End Our Work */
+/* Start Stuff */
+.stuff .desctription {
+    max-width:500px
+}
+/* End Stuff  */
+/* Start Team */
+.team {
+    background-color:var(--section-color)
+}
+.team h2 {
+    color:var(--yellow)
+}
+.team .box {
+    box-shadow: 0  5px 10px rgba(0, 0, 0, .1);
+    border-radius: 5px;
+    overflow: hidden;
+    transition: .4s;
+}
+.team .box:hover {
+    box-shadow: 0  5px 10px rgba(0, 0, 0, .5);
+    cursor: pointer;
+    transform:translateY(-10px)
+
+}
+.team h4 {
+    background-color: var(--green);
+}
+/* End Team */
+/* Start Tech */
+@media (max-width:767px) {
+    .techs .row > div {
+        margin-bottom:20px
+    }    
+}
+
+/* End Tech */
+/* Start Pro */
+.pro {
+    background-color:var(--dark)
+}
+/* End Pro */
+/* Start Subscribtion */
+.subscribe {
+    background-color:var(--yellow)
+}
+.subscribe input[type="text"] {
+    border:none;
+    border-bottom:1px solid white
+}
+.subscribe input[type="text"]:focus {
+    outline:none
+}
+.subscribe input[type="text"]::placeholder {
+    color:white
+}
+.subscribe input[type="submit"] {
+    background-color: var(--dark);
+    color:var(--yellow);
+    cursor:pointer;
+    transition:.3s
+}
+@media (max-width:991px) {
+    .subscribe .row div:nth-child(2) {
+        width:auto;
+        margin: 0 auto 10px;
+    }
+}
+.subscribe input[type="submit"]:hover {
+    background-color: white;
+    color:var(--dark)
+}
+/* End Subscribtion */
+/* Start Footer */
+footer {
+    background-color:var(--dark)
+}
+footer .copyright p:first-of-type span {
+    color:var(--green)
+}
+footer .copyright p:last-of-type span {
+    color:var(--yellow)
+}
+footer ul li {
+transition:.3s;
+}
+footer ul:not(.social) li:hover {
+    background-color: none;
+    color:white;
+    text-shadow: 0 0 10px white;
+    cursor:pointer;
+    transform:translateX(10px)
+}
+@media (max-width:768px) {
+    footer .social {
+        justify-content: center;
+    }
+}
+footer .facebook {
+    background-color: white;
+    color:#1877f2
+}
+footer .twitter {
+    background-color: white;
+    color:#1da1f2
+}
+footer .linkedin {
+    background-color: white;
+    color:#0a66c2
+}
+footer .youtube {
+    background-color: white;
+    color:#ff0000
+}
+/* End Footer */
