@@ -87,6 +87,13 @@ input {
     color:var(--green);
     cursor:pointer
 }
+.navbar .search input[type="search"] {
+    position: absolute;
+    bottom: -35px;
+    right: 380px;
+    outline: none;
+    display: none
+}
 .navbar .navbar-toggler {
     color:white;
     font-size:25px;
@@ -112,15 +119,15 @@ input {
 .features .icons-holder {
     min-height: 200px;
 }
-.features .icons-holder svg {
+.features .icons-holder i {
     left:50%;
     transform:translateX(-50%);
 }
-.features .icons-holder svg:first-of-type {
+.features .icons-holder i:first-of-type {
     font-size:12rem;
     color:var(--section-color)
 }
-.features .icons-holder svg:last-of-type {
+.features .icons-holder i:last-of-type {
     color:var(--green);
     font-size:4rem
 }

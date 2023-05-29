@@ -18,9 +18,7 @@ window.onload = function () {
     }, 200)
 }
 // Show And Hide Search Bar
-document.querySelector("#svg-object").addEventListener("click",  () =>{
-
-    console.log("ok")
+document.querySelector(".navbar .search i").addEventListener("click",  () =>{
     document.querySelector("[type='search']").classList.toggle("show")
 })
 
