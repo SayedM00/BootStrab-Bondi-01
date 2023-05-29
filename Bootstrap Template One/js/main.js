@@ -1,13 +1,37 @@
+window.document.title = "Bondi";
 // Page Bar
 window.onscroll = () => {
     document.querySelector(".bar").style.width = `${(document.documentElement.scrollTop / (document.documentElement.scrollHeight - document.documentElement.clientHeight)) * 100}%`
 }
-
+window.onload = function () {
+    let heading = document.querySelector("h1");
+    let x = heading.textContent;
+    heading.innerHTML = "";
+    let y = 0;
+    let w = setInterval(_=> {
+        if (y > x.length - 1) {
+            clearInterval(w);
+        } else {
+            heading.textContent += x[y]
+            y++;
+        }
+    }, 200)
+}
 // Show And Hide Search Bar
 document.querySelector("#svg-object").addEventListener("click",  () =>{
 
     console.log("ok")
     document.querySelector("[type='search']").classList.toggle("show")
+})
+
+// Add and Delete active Class from nav links
+let links = document.querySelectorAll(".navbar .navbar-nav li a");
+
+links.forEach(link => {
+    link.addEventListener("click", (e) => {
+        removeActiveClass(links)
+        addActiveClass(e.target)
+    })
 })
 
 // Hide And Show Depends on Fillter and LocalStorage
